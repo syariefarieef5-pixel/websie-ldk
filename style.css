@@ -1,0 +1,60 @@
+/* Container utama (semua konten jadi rapi di tengah) */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+/* Header profesional: kiri brand, kanan menu */
+.site-header {
+  display: flex;
+  justify-content: space-between; /* kiri-kanan */
+  align-items: flex-start;
+  gap: 20px;
+  padding: 10px 0 20px;
+}
+section {
+  margin-bottom: 40px;
+}
+/* Rapikan paragraf di brand */
+.brand p {
+  margin: 6px 0;
+}
+
+/* Nav pakai flex + jarak rapi */
+.nav {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  margin-top: 6px;
+}
+
+.nav a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+.nav a:hover {
+  color: #1abc9c;
+}
+
+section {
+  margin-bottom: 40px;
+}
+/* Card putih untuk area konten */
+main {
+  background-color: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Rapikan jarak paragraf */
+p {
+  line-height: 1.6;
+  margin: 8px 0;
+}
+
+/* Jarak header ke card */
+header {
+  margin-bottom: 16px;
+}
