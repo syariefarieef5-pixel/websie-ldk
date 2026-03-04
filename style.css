@@ -1,60 +1,397 @@
-/* Container utama (semua konten jadi rapi di tengah) */
-.container {
-  max-width: 800px;
+/* RESET SEDERHANA */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: Arial, Helvetica, sans-serif; line-height: 1.6; }
+/* DESKTOP: 3 kolom */
+/* DESKTOP: 3 kolom */
+@media (min-width: 901px){
+  .galeri-card{
+    flex: 0 0 calc(33.333% - 10px);
+  }
+}
+
+/* TABLET/HP: 2 kolom */
+@media (max-width: 900px){
+  .galeri-card{
+    flex: 0 0 calc(50% - 7px);
+  }
+}
+
+/* HP kecil: 1 kolom (kalau mau tetap 2 kolom, hapus bagian ini) */
+@media (max-width: 420px){
+  .galeri-card{
+    flex: 0 0 100%;
+  }
+}
+/* CONTAINER */
+.container{
+  width: min(1100px, 92%);
   margin: 0 auto;
 }
-/* Header profesional: kiri brand, kanan menu */
-.site-header {
-  display: flex;
-  justify-content: space-between; /* kiri-kanan */
-  align-items: flex-start;
-  gap: 20px;
-  padding: 10px 0 20px;
+.container1{
+  width: min(1100px, 92%);
+  margin: 0 auto;
 }
-section {
-  margin-bottom: 40px;
-}
-/* Rapikan paragraf di brand */
-.brand p {
-  margin: 6px 0;
+/* HEADER / NAV */
+.header{
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  background: #fff;
+  border-bottom: 1px solid #eee;
 }
 
-/* Nav pakai flex + jarak rapi */
-.nav {
+/* ===== GALERI (RAPI) ===== */
+.galeri-flex{
   display: flex;
-  gap: 18px;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 14px;
+}
+
+.galeri-card{
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 14px;
+  padding: 10px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;   /* isi card di tengah */
+  text-align: center;    /* teks di tengah */
+}
+
+/* gambar mengikuti card dan tidak “aneh” */
+.galeri-card img{
+  width: 100%;
+  aspect-ratio: 4 / 4;   /* biar rapi di semua ukuran */
+  object-fit: contain;   /* logo tidak kepotong */
+  border-radius: 10px;
+  background: #fafafa;
+}
+
+/* teks bawah rapi */
+.galeri-card p{
+  margin-top: 8px;
+  font-weight: 700;
+}
+
+
+.nav{
+  height: 64px;
+  display: flex;
   align-items: center;
-  margin-top: 6px;
+  justify-content: space-between;
+  gap: 12px;
+  
 }
 
-.nav a {
+
+/* BRAND */
+.logo{
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+  justify-content: flex-start;
+  
+}
+.logo a{
   text-decoration: none;
-  font-weight: bold;
-  color: #2c3e50;
+  color: inherit;
+}
+.logo-img{
+  width: 48px;
+  height: auto;
 }
 
-.nav a:hover {
-  color: #1abc9c;
+.logo h1{
+  font-size: 20px;
+  font-weight: 700;      /* FIX: dulu 2000 */
+  letter-spacing: 1px;
+  color: #555;
 }
 
-section {
-  margin-bottom: 40px;
-}
-/* Card putih untuk area konten */
-main {
-  background-color: white;
-  padding: 30px;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  .logo span{
+  font-size: 18px;
+  color: #555;
+  font-weight: 500;
 }
 
-/* Rapikan jarak paragraf */
-p {
-  line-height: 1.6;
-  margin: 8px 0;
+
+/* MENU - DESKTOP: selalu tampil */
+.menu{
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  align-items: center;
 }
 
-/* Jarak header ke card */
-header {
+.menu-link{
+  text-decoration: none;
+  color: #2c3e50;        /* FIX: jangan biru default */
+  font-weight: 700;
+  padding: 8px 10px;
+  border-radius: 10px;
+}
+
+.menu-link:hover{
+  color: #1abc9c;        /* FIX: hover lebih profesional */
+  background: rgba(26, 188, 156, 0.12);
+}
+
+/* HAMBURGER - DESKTOP: disembunyikan */
+.hamburger{
+  display: none;
+  width: 42px;
+  height: 42px;
+  border: 1px solid #eee;
+  background: #fff;
+  border-radius: 10px;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  flex-direction: column;
+}
+
+.hamburger span{
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: #111;
+  transition: 0.2s ease;
+}
+
+/* HERO */
+.hero {
+  position: relative;
+  min-height: 30vh;
+  display: flex;
+  align-items: center;
+  color: white;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("assets/Ldf.JPG");
+  background-size: cover;
+  background-position: center;
+  filter: blur(2px) brightness(90%);
+  transform: scale(1.05);
+  z-index: -1;
+}
+.hero-wrap{
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 18px;
+  align-items: start;
+}
+
+.hero-text h1{
+  font-size: 34px;
+  line-height: 1.2;
+  margin-bottom: 10px;
+}
+
+.hero-text p{
   margin-bottom: 16px;
+  color: white;
+  outline-color: black;
+  outline: black;
+  
+}
+.hero-text h2{
+  margin-bottom: 2px;
+  color: whitesmoke;
+  outline-color: black;
+  outline: black;
+  
+}
+h2{
+  color: maroon;
+}
+.video-wrapper {
+  position: relative;
+  margin-top: 30px;
+  padding-bottom: 56.25%; /* Rasio 16:9 */
+  height: 0;
+  overflow: hidden;
+  border-radius: 14px;
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.hero-actions{
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.btn{
+  display: inline-block;
+  text-decoration: none;
+  background: whitesmoke;
+  color: black;
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-weight: 700;
+}
+
+.btn-outline{
+  background: transparent;
+  color: whitesmoke;
+  border: 2px solid #fff;
+}
+
+.hero-card{
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 14px;
+  padding: 16px;
+}
+
+.hero-card h3{ margin-bottom: 10px; }
+.hero-card ul{ padding-left: 18px; }
+
+/* SECTION */
+.section{
+  padding: 30px 0;
+}
+
+.section h2{
+  margin-bottom: 10px;
+  font-size: 26px;
+}
+
+.misi1 {
+  margin-top: 10px;
+}
+
+.grid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin-top: 14px;
+}
+
+.card{
+  border: 1px solid #eee;
+  border-radius: 14px;
+  padding: 16px;
+  background: fff;
+}
+
+.card-link,
+.card-link:visited,
+.card-link:hover,
+.card-link:active{
+  color: inherit;
+  text-decoration: none;
+}
+
+/* FOOTER */
+.footer{
+  padding: 18px 0;
+  border-top: 1px solid #eee;
+  background: #fff;
+  color: #333;
+}
+
+/* RESPONSIVE (mobile) */
+@media (max-width: 820px){
+  .hamburger{ display: flex; }
+
+  /* Mobile: menu jadi dropdown/panel */
+  .menu{
+    position: absolute;
+    top: 64px;
+    right: 0;
+    width: 75vw;
+    max-width: 280px;
+    background: #fff;
+    border: 1px solid #eee;
+    border-top: none;
+    border-radius: 0 0 14px 14px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+
+    display: none;               /* default disembunyikan */
+    flex-direction: column;
+    align-items: stretch;
+    padding: 12px;
+    gap: 8px;
+    z-index: 1000;
+  }
+
+  .menu.show{ display: flex; }
+
+  .menu-link{
+    width: 100%;
+    text-align: left;
+    padding: 12px 10px;
+  }
+
+  .hero-wrap{
+    grid-template-columns: 1fr;
+  }
+
+  .grid{
+    grid-template-columns: 1fr;
+  }
+/* ===== KONTAK ===== */
+
+.contact-list{
+  list-style: none;
+  margin-top: 20px;
+  padding: 0;
+}
+
+.contact-list li{
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  padding: 14px 16px;
+  margin-bottom: 10px;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+
+  transition: 0.2s ease;
+}
+
+/* efek hover */
+.contact-list li:hover{
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transform: translateY(-2px);
+}
+
+/* label seperti Email: WhatsApp: */
+.contact-list strong{
+  color: #333;
+  min-width: 90px;
+}
+
+/* link */
+.contact-list a{
+  color: #1a73e8;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* hover link */
+.contact-list a:hover{
+  text-decoration: underline;
+}
+
+/* alamat */
+.contact-list span{
+  color: #555;
 }
