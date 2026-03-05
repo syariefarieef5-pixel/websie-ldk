@@ -3,35 +3,31 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Website Organisasi</title>
+  <title>LDF Raudhatul Mujaddid - FT UNM</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- HEADER / NAVBAR -->
   <header class="header">
-    <div class="container nav">
-      <img src="assets/logo.png" alt="Logo LDK" class="logo-img" />
+    <div class="container nav-wrapper">
+      <a href="#beranda" class="brand">
+        <img src="assets/logo.png" alt="Logo LDK" class="logo-img" />
+        <div class="brand-text">
+          <span>Lembaga Dakwah Fakultas</span>
+          <h1>Raudhatul Mujaddid</h1>
+        </div>
+      </a>
 
-      <div class="logo">
-       <a href="#beranda" >
-        <span>Lembaga Dakwah Fakultas</span>
-        <h1>Raudhtaul Mujaddid</h1>
-        </a>
-      </div>
-
-      <!-- Button Burger (CUMA 1) -->
-      <button class="hamburger" id="hamburger" aria-label="Toggle Menu" aria-controls="menu" aria-expanded="false">
+      <button class="hamburger" id="hamburger" aria-label="Toggle Menu">
         <span></span>
         <span></span>
         <span></span>
       </button>
 
-      <!-- Menu -->
-      <nav class="menu" id="menu" aria-label="Menu utama">
+      <nav class="menu" id="menu">
         <a href="#beranda" class="menu-link">Beranda</a>
-        <a href="#visi" class="menu-link">Visi Misi</a>
         <a href="#tentang" class="menu-link">Tentang</a>
+        <a href="#visi" class="menu-link">Visi Misi</a>
         <a href="#program" class="menu-link">Program</a>
         <a href="#galeri" class="menu-link">Galeri</a>
         <a href="#kontak" class="menu-link">Kontak</a>
@@ -40,163 +36,157 @@
   </header>
 
   <main>
-
-    <!-- HERO -->
     <section class="hero" id="beranda">
-      <div class="container hero-wrap">
-        <div class="hero-text">
-          <h2>Membangun Generasi Qurani yang Berintegritas dan Berdaya</h2>
-          <p>Tempat informasi kegiatan, program kerja, dan dokumentasi organisasi.</p>
-
-          <div class="hero-actions">
-            <a class="btn" href="#program">Lihat Program</a>
-            <a class="btn btn-outline" href="#kontak">Hubungi Kami</a>
-          </div>
+      <div class="hero-overlay"></div>
+      <div class="container hero-content">
+        <h2>Membangun Generasi Qur'ani yang Berintegritas dan Berdaya</h2>
+        <p>Tempat informasi kegiatan, program kerja, dan dokumentasi organisasi Lembaga Dakwah Fakultas Raudhatul Mujaddid (LDF RM FT UNM).</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#program">Lihat Program</a>
+          <a class="btn btn-outline" href="#kontak">Hubungi Kami</a>
         </div>
       </div>
     </section>
 
-    <!-- SECTION: TENTANG -->
     <section class="section" id="tentang">
-      <div class="container">
-        <h2>Tentang Organisasi</h2>
-        <p>
-          Lembaga Dakwah Fakultas Raudhatul Mujaddid (LDF RM FT UNM) merupakan organisasi kemahasiswaan yang bergerak di bidang dakwah Islam di lingkungan Fakultas Teknik. LDF hadir sebagai wadah bagi mahasiswa untuk memperdalam pemahaman keislaman, memperkuat ukhuwah, serta menumbuhkan karakter mahasiswa yang berakhlak mulia, berilmu, dan berkontribusi positif bagi masyarakat.
+      <div class="container text-center">
+        <div class="section-title">
+          <h2>Tentang Organisasi</h2>
+          <div class="line"></div>
+        </div>
+        <p class="desc-text">
+          Lembaga Dakwah Fakultas Raudhatul Mujaddid (LDF RM FT UNM) merupakan organisasi kemahasiswaan yang bergerak di bidang dakwah Islam di lingkungan Fakultas Teknik. LDF hadir sebagai wadah bagi mahasiswa untuk memperdalam pemahaman keislaman, memperkuat ukhuwah, serta menumbuhkan karakter mahasiswa yang berakhlak mulia.
         </p>
-
         <div class="video-wrapper">
-          <iframe
-            src="https://www.youtube.com/embed/ON5GUMEHttc"
-            title="Video Kegiatan"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen>
-          </iframe>
+          <iframe src="https://www.youtube.com/embed/ON5GUMEHttc" title="Video Kegiatan" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
       </div>
     </section>
 
-    <!-- VISI MISI -->
-    <section class="section" id="visi">
+    <section class="section bg-light" id="visi">
       <div class="container">
-        <h2>Visi Misi Organisasi</h2>
-
-        <div class="hero-card">
-          <h3>Visi</h3>
-          <ul>
-            <li>Menjadi ...</li>
-          </ul>
-
-          <div class="misi">
+        <div class="section-title text-center">
+          <h2>Visi & Misi</h2>
+          <div class="line"></div>
+        </div>
+        <div class="vm-grid">
+          <div class="vm-card">
+            <h3>Visi</h3>
+            <ul>
+              <li>Menjadi lembaga dakwah yang mengakar dan profesional di Fakultas Teknik.</li>
+            </ul>
+          </div>
+          <div class="vm-card">
             <h3>Misi</h3>
             <ul>
-              <li>Menjalankan ...</li>
+              <li>Menjalankan syiar Islam yang inovatif dan kreatif.</li>
+              <li>Membangun kaderisasi yang kokoh dan berkelanjutan.</li>
             </ul>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- SECTION: PROGRAM / DEPARTEMEN -->
     <section class="section" id="program">
       <div class="container">
-        <h2>Departemen</h2>
-
-        <div class="grid">
-          <a href="piqpel.html" class="card-link">
-            <article class="card">
-              <h3>Departemen PIQPEL</h3>
-              <p>Pendidikan Ilmu Al-Qur'an dan Pelatihan.</p>
-            </article>
+        <div class="section-title text-center">
+          <h2>Departemen Kami</h2>
+          <div class="line"></div>
+          <p>Mengenal lebih dekat divisi yang ada di dalam organisasi.</p>
+        </div>
+        
+        <div class="dept-grid">
+          <a href="piqpel.html" class="dept-card">
+            <div class="dept-icon">📖</div>
+            <h3>PIQPEL</h3>
+            <p>Pendidikan Ilmu Al-Qur'an dan Pelatihan.</p>
           </a>
 
-          <a href="kaderisasi.html" class="card-link">
-            <article class="card">
-              <h3>Departemen KADERISASI</h3>
-              <p>Kaderisasi.</p>
-            </article>
+          <a href="kaderisasi.html" class="dept-card">
+            <div class="dept-icon">👥</div>
+            <h3>KADERISASI</h3>
+            <p>Fokus pada pengembangan dan pemberdayaan anggota.</p>
           </a>
 
-          <a href="drtm.html" class="card-link">
-            <article class="card">
-              <h3>Departemen DRTM</h3>
-              <p>Dakwah Rumah Tangga Masjid.</p>
-            </article>
+          <a href="drtm.html" class="dept-card">
+            <div class="dept-icon">🕌</div>
+            <h3>DRTM</h3>
+            <p>Dakwah Rumah Tangga Masjid dan pemakmuran masjid.</p>
           </a>
 
-          <a href="humas.html" class="card-link">
-            <article class="card">
-              <h3>Departemen HUMAS</h3>
-              <p>Hubungan Masyarakat.</p>
-            </article>
+          <a href="humas.html" class="dept-card">
+            <div class="dept-icon">🤝</div>
+            <h3>HUMAS</h3>
+            <p>Hubungan Masyarakat, media, dan publikasi.</p>
           </a>
         </div>
       </div>
     </section>
-    
-<section class="section" id="galeri">
-  <div class="container">
-    <h2>Kegiatan Dakwah</h2>
 
-    <div class="galeri-flex">
+    <section class="section bg-light" id="galeri">
+      <div class="container">
+        <div class="section-title text-center">
+          <h2>Kegiatan Dakwah</h2>
+          <div class="line"></div>
+        </div>
 
-      <div class="galeri-card">
-        <img src="assets/terampil.jpg" alt="kegiatan">
-        <p>training muslim pilihan</p>
+        <div class="gallery-grid">
+          <div class="gallery-card">
+            <img src="assets/terampil.jpg" alt="Training Muslim Pilihan">
+            <p>Training Muslim Pilihan</p>
+          </div>
+          <div class="gallery-card">
+            <img src="assets/pgm.jpg" alt="Penataran Generasi Mukmin">
+            <p>Penataran Generasi Mukmin</p>
+          </div>
+          <div class="gallery-card">
+            <img src="assets/taklim.webp" alt="Taklim Pekanan">
+            <p>Taklim Pekanan</p>
+          </div>
+          <div class="gallery-card">
+            <img src="assets/tablig.webp" alt="Tablig Akbar">
+            <p>Tablig Akbar</p>
+          </div>
+        </div>
       </div>
+    </section>
 
-      <div class="galeri-card">
-        <img src="assets/pgm.jpg" alt="kegiatan">
-        <p>Penataran Generasi Mukmin</p>
-      </div>
-
-      <div class="galeri-card">
-        <img src="assets/taklim.webp" alt="kegiatan">
-        <p>Taklim Pekanan</p>
-      </div>
-      
-      <div class="galeri-card">
-        <img src="assets/tablig.webp" alt="kegiatan">
-        <p>Tablig Akbar</p>
-      </div>
-
-    </div>
-
-  </div>
-</section>
-
-    <!-- SECTION: KONTAK -->
     <section class="section" id="kontak">
       <div class="container">
-        <h2>Kontak</h2>
-        <p>Silakan hubungi kami melalui:</p>
-
+        <div class="section-title text-center">
+          <h2>Hubungi Kami</h2>
+          <div class="line"></div>
+        </div>
+        
         <ul class="contact-list">
           <li>
             <strong>Email:</strong>
-            <a href="https://saripuddinjeka@gmail.com">
-              raudhatulmujaddid@gmail.com
-            </a>
+            <a href="mailto:raudhatulmujaddid@gmail.com">raudhatulmujaddid@gmail.com</a>
           </li>
-
           <li>
             <strong>Instagram:</strong>
-            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=raudhatulmujaddid@gmail.com"
-target="_blank"> @Raudhatul Mujaddid
-            </a>
+            <a href="https://instagram.com/raudhatulmujaddid" target="_blank">@Raudhatul Mujaddid</a>
           </li>
-
           <li>
             <strong>Alamat:</strong>
-            Jalan Malengkeri raya, Fakultas Teknik Universitas Neger Makassar
+            <span>Jalan Malengkeri Raya, Fakultas Teknik Universitas Negeri Makassar</span>
           </li>
         </ul>
       </div>
     </section>
-
   </main>
 
-  <!-- Panggil JS di BAWAH agar pasti jalan -->
-  <script src="script.js"></script>
+  <footer style="text-align: center; padding: 20px; background: #1f2937; color: white;">
+    <p>&copy; 2026 LDF Raudhatul Mujaddid. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const menu = document.getElementById('menu');
+
+    hamburger.addEventListener('click', () => {
+      menu.classList.toggle('show');
+    });
+  </script>
 </body>
 </html>
